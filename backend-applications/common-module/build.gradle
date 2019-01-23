@@ -1,0 +1,10 @@
+
+
+dependencies {
+	compile 'ch.qos.logback:logback-classic'
+	compile group: 'org.projectlombok', name: 'lombok', version: '1.18.4'
+
+	compile 'org.springframework.boot:spring-boot-starter-web'
+}
+
+

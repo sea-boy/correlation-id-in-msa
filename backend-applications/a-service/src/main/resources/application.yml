@@ -1,0 +1,21 @@
+
+
+spring:
+    application:
+        name: A-Service
+    main:
+        show-banner: true
+
+    http:
+        encoding:
+            charset: UTF-8
+            enabled: true
+            force: true
+
+server:
+    port: 8001
+    contextPath: /request
+    undertow:
+        io-threads: 32
+        worker-threads: 256
+

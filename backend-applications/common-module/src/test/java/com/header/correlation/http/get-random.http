@@ -1,0 +1,6 @@
+
+
+GET http://localhost:8001/request/random/number
+
+###
+

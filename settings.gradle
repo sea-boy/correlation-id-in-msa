@@ -1,0 +1,16 @@
+rootProject.name = 'correlation'
+
+['backend-applications'].each {
+    def projectDir = new File(rootDir, it)
+
+    if(!projectDir.exists()) {
+        projectDir.mkdirs()
+    }
+
+    projectDir.eachDir { dir ->
+        include ":${it}-${dir.name}"
+        project(":${it}-${dir.name}").projectDir = new File(projectDir.absolutePath, dir.name)
+    }
+
+}
+
