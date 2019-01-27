@@ -5,13 +5,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
-public class Request {
+public class RandomApi {
 
     private RandomService randomService;
 
     @Autowired
-    public Request(RandomService randomService) {
+    public RandomApi(RandomService randomService) {
         this.randomService = randomService;
     }
 

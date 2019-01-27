@@ -53,4 +53,15 @@ project(':backend-applications-a-service') {
 	}
 }
 
+project(':backend-applications-b-service') {
+	dependencies {
+		compile project(':backend-applications-common-module')
+	}
+}
+
+project(':backend-applications-c-service') {
+	dependencies {
+		compile project(':backend-applications-common-module')
+	}
+}
 
