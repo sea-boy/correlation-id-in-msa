@@ -1,4 +1,4 @@
 
-GET http://localhost:8002/api/length
+GET http://localhost:8002/bs/api/string
 
 ###

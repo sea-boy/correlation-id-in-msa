@@ -7,14 +7,6 @@ import org.springframework.stereotype.Service;
 public class CharService {
 
     public String getChar() {
-        return "a";
-    }
-
-    public String getString() {
-        String result = null;
-
-
-
-        return result;
+        return "b";
     }
 }
