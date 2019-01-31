@@ -3,9 +3,9 @@ package com.header.correlation.biz;
 import org.springframework.stereotype.Service;
 
 @Service
-public class RandomService {
+public class CharService {
 
-    public String getRandom() {
-        return String.valueOf(1);
+    public String getChar() {
+        return "a";
     }
 }
