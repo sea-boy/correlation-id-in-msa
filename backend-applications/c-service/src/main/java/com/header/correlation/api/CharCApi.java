@@ -7,27 +7,27 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class CharBApi {
+public class CharCApi {
 
     private CharService charService;
     private StringService stringService;
 
     @Autowired
-    public CharBApi(CharService charService,
+    public CharCApi(CharService charService,
                     StringService stringService) {
         this.charService = charService;
         this.stringService = stringService;
     }
 
     @GetMapping("/api/char")
-    public String getChar() {
-        return charService.getChar();
+    public CharInfo getChar() {
+        String ci = charService.getChar();
+        return CharInfo.of(ci);
     }
 
     @GetMapping("/api/string")
-    public String getString() {
-        return stringService.getString();
+    public StringInfo getString() {
+        String si = stringService.getString();
+        return StringInfo.of(si);
     }
-
-
 }

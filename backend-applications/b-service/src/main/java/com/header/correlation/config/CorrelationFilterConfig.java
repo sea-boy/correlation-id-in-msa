@@ -4,7 +4,6 @@ import com.header.correlation.infra.filter.CorrelationIdFilter;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.Filter;
 
@@ -24,5 +23,4 @@ public class CorrelationFilterConfig {
     public Filter correlationIdFilter() {
         return new CorrelationIdFilter();
     }
-
 }

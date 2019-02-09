@@ -17,7 +17,6 @@ import java.io.IOException;
 
 @Slf4j
 public class CorrelationIdFilter extends OncePerRequestFilter {
-//    private static final Logger log = LoggerFactory.getLogger(CorrelationIdFilter.class);
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
