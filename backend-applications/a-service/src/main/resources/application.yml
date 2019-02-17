@@ -14,7 +14,7 @@ spring:
 
 server:
     port: 8001
-    contextPath: /request
+    contextPath: /as
     undertow:
         io-threads: 32
         worker-threads: 256
