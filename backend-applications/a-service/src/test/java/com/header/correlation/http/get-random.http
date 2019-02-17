@@ -1,6 +1,6 @@
 
 
-GET http://localhost:8001/request/random/number
+GET http://localhost:8001/as/api/char
 Content-Type: application/json
 
 ###
