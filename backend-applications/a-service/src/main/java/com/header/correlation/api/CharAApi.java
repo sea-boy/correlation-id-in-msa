@@ -20,13 +20,14 @@ public class CharAApi {
     }
 
     @GetMapping("/api/char")
-    public String getChar() {
-        return charService.getChar();
+    public CharInfo getChar() {
+        String ci = charService.getChar();
+        return CharInfo.of(ci);
     }
 
     @GetMapping("/api/string")
-    public String getString() {
-        return stringService.getString();
+    public StringInfo getString() {
+        String si = stringService.getString();
+        return StringInfo.of(si);
     }
-
 }
