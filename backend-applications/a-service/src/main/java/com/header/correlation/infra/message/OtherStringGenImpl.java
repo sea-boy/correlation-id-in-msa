@@ -28,7 +28,7 @@ public class OtherStringGenImpl implements OtherStringGenerator {
         } catch (Exception ex) {
             log.error("error: {}", ex);
         }
-        return charRes.getCharGen();
+        return charRes.getCharInfo();
     }
 
     @Override
@@ -40,6 +40,6 @@ public class OtherStringGenImpl implements OtherStringGenerator {
         } catch (Exception ex) {
             log.error("error: {}", ex);
         }
-        return charRes.getCharGen();
+        return charRes.getCharInfo();
     }
 }
