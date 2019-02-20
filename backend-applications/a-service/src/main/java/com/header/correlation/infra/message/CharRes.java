@@ -2,9 +2,18 @@ package com.header.correlation.infra.message;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.Setter;
 
+@Setter
 @Getter
-@AllArgsConstructor
 public class CharRes {
-    private String charGen;
+    private String charInfo;
+
+    public CharRes() {
+        super();
+    }
+
+    public CharRes(String charInfo) {
+        this.charInfo = charInfo;
+    }
 }
