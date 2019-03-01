@@ -26,8 +26,6 @@ public class LoggingAspect {
 //    }
     @Around("execution(public * com.header.correlation.api.*.*(..))")
     public Object around(ProceedingJoinPoint pjp) throws Throwable {
-        UrlPathHelper uph = new UrlPathHelper();
-        String url = uph.getOriginatingRequestUri()
 
         String reqInfo = new StringBuilder(pjp.getTarget().getClass().getName())
                 .append(".")

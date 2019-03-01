@@ -25,9 +25,9 @@ public class LoggingRequestIntercepter implements ClientHttpRequestInterceptor {
     @Override
     public ClientHttpResponse intercept(HttpRequest request, byte[] body, ClientHttpRequestExecution execution) throws IOException {
         HttpRequestInfo requestInfo = HttpRequestInfo.builder()
-                .httpMethod(request.getMethod())
-                .uri(request.getURI())
-                .body(body)
+                .httpMethod(request.getMethod().name())
+                .uri(request.getURI().toString())
+                .body(new String(body))
                 .build();
         logger.logRequest(requestInfo);
 
@@ -36,7 +36,7 @@ public class LoggingRequestIntercepter implements ClientHttpRequestInterceptor {
         long duration = System.currentTimeMillis() - start;
 
         HttpResponseInfo responseInfo = HttpResponseInfo.builder()
-                .httpStatus(response.getStatusCode())
+                .httpStatus(response.getStatusCode().toString())
                 .body(IOUtils.toString(response.getBody(), Charset.defaultCharset()))
                 .build();
         logger.logResponse(requestInfo, responseInfo, duration);
