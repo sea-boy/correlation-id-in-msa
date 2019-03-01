@@ -11,7 +11,7 @@ public class HttpRequestResponseFormatter {
 
     public String getRequestString(HttpRequestInfo requestInfo) {
         String info = new StringBuilder(REQUEST)
-                .append(requestInfo.getHttpMethod().name())
+                .append(requestInfo.getHttpMethod())
                 .append(" ")
                 .append(requestInfo.getUri())
                 .append(" ")
@@ -22,7 +22,7 @@ public class HttpRequestResponseFormatter {
 
     public String getResponseString(HttpRequestInfo requestInfo, HttpResponseInfo responseInfo, long duration) {
         String info = new StringBuilder(RESPONSE)
-                .append(requestInfo.getHttpMethod().name())
+                .append(requestInfo.getHttpMethod())
                 .append(" ")
                 .append(requestInfo.getUri())
                 .append(" ")

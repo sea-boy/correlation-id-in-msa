@@ -10,7 +10,7 @@ public class HttpRequestResponseLogger {
 
     private HttpRequestResponseLogger() {}
 
-    public HttpRequestResponseLogger of(HttpRequestResponseFormatter formatter) {
+    public static HttpRequestResponseLogger of(HttpRequestResponseFormatter formatter) {
         HttpRequestResponseLogger logger = new HttpRequestResponseLogger();
         logger.formatter = formatter;
         return logger;
